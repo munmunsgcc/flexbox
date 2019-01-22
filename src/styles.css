@@ -1,16 +1,29 @@
+/*
+* https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+*/
+
 .container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-  align-content: stretch;
-  flex-wrap: wrap;
+  display: flex; /* Sets this container as a flex container */
+  flex-direction: row; /* Arranges items from left to right */
+  justify-content: space-between; /*Different styles of adjusting spaces in between the item in container or positioning the item as a whole*/
+  align-items: flex-start;
+  flex-wrap: wrap; /* Put overflowed items into multiple lines */
   height: 200px;
   outline: 1px solid red;
 }
 
 .item {
   padding: 10px;
-  width: 200px;
   outline: 1px solid black;
 }
+
+.item:first-child {
+  order: 2; /* Sets the item to be at position no.4 */
+}
+
+/* .item:last-child {
+  flex-grow: 1; /* Sets the item to occupy 2 spaces of item */
+
+/* .item:nth-child(2n) {
+  align-self: flex-end;
+} */
