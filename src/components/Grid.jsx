@@ -3,8 +3,8 @@ import shortid from 'shortid';
 import Item from './Item';
 
 export default () => (
-  <div className="flex">
-    {['a', 'b', 'c', 'd', 'e'].map(num => (
+  <div className="grid">
+    {['a', 'b', 'c', 'd', 'e', 'f'].map(num => (
       <Item name={num} key={shortid.generate()} />
     ))}
   </div>

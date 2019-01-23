@@ -1,8 +1,9 @@
 /*
 * https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+* https://css-tricks.com/snippets/css/complete-guide-grid/
 */
 
-.container {
+.flex {
   display: flex; /* Sets this container as a flex container */
   flex-direction: row; /* Arranges items from left to right */
   justify-content: space-between; /*Different styles of adjusting spaces in between the item in container or positioning the item as a whole*/
@@ -12,18 +13,31 @@
   outline: 1px solid red;
 }
 
-.item {
+.flex .item {
   padding: 10px;
   outline: 1px solid black;
 }
 
-.item:first-child {
+.flex .item:first-child {
   order: 2; /* Sets the item to be at position no.4 */
 }
 
-/* .item:last-child {
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: 50px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+.grid .item {
+  padding: 10px;
+  outline: 1px solid black;
+}
+
+/* .flex .item:last-child {
   flex-grow: 1; /* Sets the item to occupy 2 spaces of item */
 
-/* .item:nth-child(2n) {
+/* .flex .item:nth-child(2n) {
   align-self: flex-end;
 } */
